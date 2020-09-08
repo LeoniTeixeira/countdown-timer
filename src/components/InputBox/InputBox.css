@@ -1,0 +1,50 @@
+body{
+    background: whitesmoke;
+    display: flex;
+}
+
+label{
+    font-family: sans-serif;
+    margin-left: 3vw;
+    color: white;
+}
+
+.container{
+    width: 96vw;
+    padding: 2rem 0;
+    margin: 1rem auto;
+    background: #aaa;
+    border-radius: 0.2rem;
+    border: 1px solid #444;
+}
+
+.input-text{
+    display: block;
+    border-radius: 0.2rem;
+    border: 0.0625rem solid #555;
+    padding: 0.5rem 0;
+    width: 90vw;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+    margin: 0 auto;
+}
+
+.input-date{
+    border-radius: 0.2rem;
+    border: 0.0625rem solid #555;
+    padding: 0.5rem;
+    width: 54vw;
+}
+
+.add-btn{
+    color: white;
+    background: green;
+    border-radius: 0.2rem;
+    border: 0.0625rem solid black;
+    width: 32vw;
+}
