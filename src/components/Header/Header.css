@@ -1,0 +1,16 @@
+body{
+    margin: 0;
+    display: flex;
+}
+
+.header-bg {
+    background: rgb(35, 35, 75);
+    width: 100vw;
+    padding: 1rem 0rem;
+}
+
+.header-logo{
+    color:whitesmoke;
+    margin: 0;
+    margin-left: 2rem;
+}
