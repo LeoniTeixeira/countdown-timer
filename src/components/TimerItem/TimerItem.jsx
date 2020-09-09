@@ -4,11 +4,10 @@ function TimerItem(props) {
 
 
   return (
-    <div>
-      <h4> Teste</h4> 
-      <button type='submit' onClick={() => props.handleDelete(props.id)}>X</button>
-    </div>
-      
+    <li>
+      <h1> { props.description } { props.date }  </h1> 
+      <button type='submit'>X</button>
+    </li>
   )
 }
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import './InputBox.css'
 
@@ -9,6 +9,8 @@ function InputBox(props) {
 
   function newTimer(){
     props.handleAdd(description, date)
+    setDate()
+    setDescription()
   }
 
   function listenDescription(e) {
@@ -25,11 +27,11 @@ function InputBox(props) {
     <>
       <div className='container'>
         <label htmlFor='date-name'>Decrição</label>
-        <input onChange={listenDescription} className='input-text' type="text" id='date-name'/>
+        <input onChange={listenDescription} value={description} className='input-text' type="text" id='date-name'/>
           <br/>
         <label htmlFor='date'>Data</label>
         <div className='row'>
-          <input onChange={listenDate} className='input-date' type="date" id='date'/>
+          <input onChange={listenDate} value={date} className='input-date' type="date" id='date'/>
           <button onClick={newTimer} className='add-btn'>Add</button>
         </div>
       </div>
