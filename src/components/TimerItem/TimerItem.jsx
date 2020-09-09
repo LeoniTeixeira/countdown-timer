@@ -1,8 +1,14 @@
 import React from 'react';
 
-function TimerItem() {
+function TimerItem(props) {
+
+
   return (
-      <h4>Data Name - timer</h4>
+    <div>
+      <h4> Teste</h4> 
+      <button type='submit' onClick={() => props.handleDelete(props.id)}>X</button>
+    </div>
+      
   )
 }
 
