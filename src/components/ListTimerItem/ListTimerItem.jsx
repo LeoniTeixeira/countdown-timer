@@ -3,13 +3,13 @@ import TimerItem from '../TimerItem/TimerItem';
 
 // import { Container } from './styles';
 
-function ListTimerItem(list) {
-
-    
-    return (
-        <ul>
-           <TimerItem description='Teste' date='11-20-2020' />
-        </ul>
+function ListTimerItem(props) {
+  return (
+    <ul>
+      {props.list.map((timer) => <TimerItem key={timer.id} {...timer} 
+                                            handleDelete={props.handleDelete}/>)}
+      {console.log(props.list)}
+    </ul>
   )
 }
 
