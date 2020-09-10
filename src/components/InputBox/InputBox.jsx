@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import './InputBox.css'
 
@@ -23,8 +23,6 @@ function InputBox(props) {
     console.log(e.target.value)
   }
 
-  // useEffect(() => {date;}, [date])
-
   return (
     <>
       <div className='container'>
@@ -34,7 +32,7 @@ function InputBox(props) {
         <label htmlFor='date'>Data</label>
         <div className='row'>
           <input onChange={listenDate} value={date} className='input-date' type="date" id='date'/>
-          <button type='submit' onClick={newTimer} className='add-btn'>Add</button>
+          <button onClick={newTimer} className='add-btn'>Add</button>
         </div>
       </div>
     </>

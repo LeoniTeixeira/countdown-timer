@@ -1,0 +1,29 @@
+.dp-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 0.2rem;
+    border: 1px solid #444;
+    padding: 0.4rem;
+    margin: 0.3rem;
+}
+
+.btn-del{
+    color: white;
+    background: red;
+    padding: 0.4rem;
+    border-radius: 0.2rem;
+    border: 1px solid rgb(90, 3, 3);
+}
+
+.btn-del:hover{
+    color: whitesmoke;
+    background: rgb(187, 7, 7);
+    border-radius: 0.2rem;
+    border: 1px solid rgb(90, 3, 3);
+}
+
+.mg-0{
+    margin: 0;
+}

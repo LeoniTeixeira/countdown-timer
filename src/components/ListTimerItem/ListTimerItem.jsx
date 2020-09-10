@@ -1,11 +1,11 @@
 import React from 'react';
 import TimerItem from '../TimerItem/TimerItem';
 
-// import { Container } from './styles';
+import './ListTimerItem.css'
 
 function ListTimerItem(props) {
   return (
-    <ul>
+    <ul className='list-style'>
       {props.list.map((timer) => <TimerItem key={timer.id} {...timer} 
                                             handleDelete={props.handleDelete}/>)}
       {console.log(props.list)}

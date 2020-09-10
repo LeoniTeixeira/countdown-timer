@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import './TimerItem.css'
+
 
 function TimerItem(props) {
   function calculateTimeLeft()  {
@@ -38,9 +40,10 @@ function TimerItem(props) {
   });
 
   return (
-    <li>
-      <h1> { props.description } {timerComponents.length ? timerComponents : "Contador Finalizado!"}  </h1> 
-      <button onClick={() => props.handleDelete(props.id)}>X</button>
+    <li className='dp-flex'>
+      <h1 className='mg-0'> { props.description } </h1>
+      <h1 className='mg-0'> {timerComponents.length ? timerComponents : "Contador Finalizado!"} </h1> 
+      <button className='btn-del' onClick={() => props.handleDelete(props.id)}>X</button>
     </li>
   )
 }
