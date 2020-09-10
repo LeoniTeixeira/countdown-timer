@@ -6,7 +6,12 @@ import ListTimerItem from './components/ListTimerItem/ListTimerItem';
 import { v4 as uuidv4 } from 'uuid';
 
 function App() {
-  const [timerList, setTimerList] = useState([])
+  if(localStorage.getItem('lsTimerList')==null){
+    const tempList=[]
+    localStorage.setItem('lsTimerList',JSON.stringify(tempList))
+  }
+
+  const [timerList, setTimerList] = useState(JSON.parse(localStorage.getItem('lsTimerList')))
 
   function handleAdd(description, date){
     const timer = {
@@ -14,16 +19,10 @@ function App() {
       description:description,
       date:date,
     }
-    if(localStorage.getItem('lsTimerList')==null){
-      const tempList=[]
-      tempList.push(timer);
-      localStorage.setItem('lsTimerList',JSON.stringify(tempList))
-    }
-    else{
-      const tempList=JSON.parse(localStorage.getItem('lsTimerList'))
-      tempList.push(timer)
-      localStorage.setItem('lsTimerList',JSON.stringify(tempList)) 
-    }
+    const tempList=JSON.parse(localStorage.getItem('lsTimerList'))
+    tempList.push(timer)
+    localStorage.setItem('lsTimerList',JSON.stringify(tempList)) 
+    
     setTimerList(JSON.parse(localStorage.getItem('lsTimerList')))
   }
 

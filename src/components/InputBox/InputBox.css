@@ -48,3 +48,7 @@ label{
     border: 0.0625rem solid black;
     width: 32vw;
 }
+.add-btn:hover{
+    transition: 200ms;
+    background: rgba(0, 128, 0, 0.795);
+}
